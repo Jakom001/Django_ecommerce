@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Hello World! </h1>
+<p>Welcome to my first Django project!</p>
+<p>the name of the products is {{name}}</p>
+
+{% with firstname="Tobias" %}
+<h1>Hello {{ firstname }}, how are you?</h1>
+{% endwith %}
+
+<ul>
+  {% for x in myproducts %}
+    <li>{{ x.name}} @ {{x.price}}</li>
+  {% endfor %}
+</ul>
+
+
+<ul>
+  {% for x in myproducts %}
+  {% if x.price > 100 %}
+    <li>{{ x.name}} @ {{x.price}}</li>
+  {% endif %}
+  {% endfor %}
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+# Ignore compiled binaries
+*.o
+*.out
+
+# Ignore temporary files
+*.tmp
+*.bak
+
+# Ignore logs
+*.log
+
+# Ignore node_modules directory for Node.js projects
+node_modules/
+
+# Ignore virtual environment directory for Python projects
+venv/
+env/
+
+# Ignore build directories
+build/
+dist/
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
