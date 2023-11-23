@@ -1,0 +1,29 @@
+<!-- product_list.html -->
+{% extends 'base.html' %}
+
+{% block main %}
+    <h2>Product List</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products_list %}
+                <tr>
+                    <td>{{ product.id }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.price }}</td>
+                    <td>
+                        <a href="{% url 'update_product' pk=product.pk %}">Update</a>
+                        <a href="{% url 'delete_product' pk=product.pk %}">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
